@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Basic Info Display</title>
+    <!-- PyScript CSS and JS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f4f9;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #ccc;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        #info {
+            margin-top: 20px;
+            font-size: 18px;
+            white-space: pre-line; /* preserve line breaks */
+            background: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basic Info</h1>
+    <div id="info">Loading info...</div>
+
+    <py-script>
+        # Assign variables for your info
+        name = "Lian Candice G. Castro"
+        age = "15 years old"
+        school = "OB Montessori Center Fv"
+
+        # Format message with line breaks
+        message = f"My name is {name}.\nI am {age}.\nI study at {school}."
+
+        # Display message inside the div with id 'info'
+        js.document.getElementById("info").innerText = message
+    </py-script>
+
+</body>
+</html>
+
